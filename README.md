@@ -9,16 +9,15 @@
 ## Github
 
 * Create a new account (or use old) github.com
-  * You'll need to do email confirmation for ne accounts
+  * You'll need to do email confirmation for new accounts
 * Go to lab repo and fork: https://github.com/trevcor/slalomLab
 
-* See if git is installed
-          - git —version
-          - mac 10.11.1 will prompt you to install git if it’s missing
-               - xCode tools adds git
-          - cd into your workspace
-          - git clone <forked repo>
-          - cd into directory
+* Check if you already have git installed
+	git —version
+   * mac 10.11.1 will prompt you to install git if it’s missing
+* cd into your workspace
+	git clone <forked repo>
+* cd into directory
 
 ## Run the app
 
