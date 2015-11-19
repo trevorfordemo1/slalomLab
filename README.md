@@ -1,4 +1,4 @@
-# slalomLab
+# Slalom Lab
 
 
 ## Prereq installs Mac Installs
@@ -29,16 +29,22 @@ git clone <forked repo>
 
 ## Run the app
 
-     -  see if node and npm are installed
-          - node -v
-          - npm -v
-     - go to https://nodejs.org/en/ to install.  dl LTS version.
-          - install into default /usr/local
-      - make sure that /usr/local/bin is in your $PATH
-          - echo $PATH
-      - CHECK usr/local permissions!
-          - cd /usr
-          - ls -l
+### Node
+
+* see if node and npm are installed
+
+```
+node -v
+npm -v
+```
+
+* go to https://nodejs.org/en/ to install.  Download the LTS version.
+* CHECK usr/local permissions!  This can be a source of lots of node pain
+
+```
+cd /usr
+ls -l
+```
           - if /usr/local is not owned by your user then you can’t install global node packages!
           - I did
                - sudo chown -R $USER /usr/local
@@ -46,6 +52,10 @@ git clone <forked repo>
                - mkdir ~/npm
                - npm config set prefix ~/npm
                - export PATH=$PATH:$HOME/npm/bin (this only updates the path for the open shell)!!!!
+      - install into default /usr/local
+      - make sure that /usr/local/bin is in your $PATH
+          - echo $PATH
+      
       - install npm dependencies
           - npm install
       - install global gulp
