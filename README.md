@@ -14,12 +14,16 @@
 
 * Check if you already have git installed
 
-    git —version
+```
+git —version
+```
 
    * mac 10.11.1 will prompt you to install git if it’s missing
 * cd into your workspace
 
-    git clone <forked repo>
+```
+git clone <forked repo>
+````
 
 * cd into directory
 
