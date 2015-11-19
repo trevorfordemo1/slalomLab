@@ -10,6 +10,9 @@
 
 * Create a new account (or use old) github.com
   * You'll need to do email confirmation for new accounts
+
+### 1. Getting the Code
+
 * Go to lab repo and fork: https://github.com/trevcor/slalomLab
 
 * Check if you already have git installed
@@ -18,16 +21,22 @@
 git —version
 ```
 
-   * mac 10.11.1 will prompt you to install git if it’s missing
-* cd into your workspace
+* mac 10.11.1 will prompt you to install git if it’s missing
+* if you arent prompted use http://git-scm.com/download/mac
+* in terminal cd into your workspace
 
 ```
 git clone <forked repo>
 ````
 
 * cd into directory
+* set active branch to develop
+	
+```
+git checkout develop
+```
 
-## Run the app
+## 2. Running the application
 
 ### Node
 
@@ -45,31 +54,96 @@ npm -v
 cd /usr
 ls -l
 ```
-          - if /usr/local is not owned by your user then you can’t install global node packages!
-          - I did
-               - sudo chown -R $USER /usr/local
-          - better to do
-               - mkdir ~/npm
-               - npm config set prefix ~/npm
-               - export PATH=$PATH:$HOME/npm/bin (this only updates the path for the open shell)!!!!
-      - install into default /usr/local
-      - make sure that /usr/local/bin is in your $PATH
-          - echo $PATH
+* if /usr/local is not owned by your user then you can’t install global node packages!
+ * I did
+
+```
+sudo chown -R $USER /usr/local
+```
+
+* better to do
+
+```
+mkdir ~/npm
+npm config set prefix ~/npm
+export PATH=$PATH:$HOME/npm/bin (this only updates the path for the open shell)!!!!
       
-      - install npm dependencies
-          - npm install
-      - install global gulp
-          - gulp —version
-          - npm install -g gulp
-     - install bower globally
-          - npm install -g bower
-    - install protractor globally
+* install into default /usr/local
+* make sure that /usr/local/bin is in your $PATH
+
+```
+echo $PATH
+```
+      
+* install npm dependencies
+
+```
+npm install
+```
+
+* install global gulp
+
+```
+gulp —version
+npm install -g gulp
+```
+
+* install bower globally
+
+```
+npm install -g bower
+```
+
+* start the node server to run the app
+
+```
+node server.js
+```
+
+* run unit tests
+
+```
+grunt test-unit
+```
+
+* run grunt dev watcher
+
+```
+grunt dev
+```
+
+* save a code change and see tests run
+
+## 3.  Hosting in the cloud
+
+* Create a Pivotal Web Services account: https://console.run.pivotal.io/register
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Sauce Labs
+
+* install protractor globally
           - npm install -g protractor
           - webdriver-manager update
-     - run the app
-          - node server.js
-     - run grunt dev watcher
-          - grunt dev
-     - save a code change and see
 
 
