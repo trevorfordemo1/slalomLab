@@ -1,0 +1,4 @@
+---
+applications:
+- name: slalomdevopsworkflow
+- command: node ./ideal/server.js

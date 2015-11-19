@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Workflow Demo</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/layout/layout.css">
+</head>
+<body ng-app="app" ng-cloak>
+	<header class="nav navbar navbar-default navbar-fixed-top workflow-navbar">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <span class="hd-brand">Workflow Demo</span>
+            </div>
+        </div>
+    </header>
+    <div class="layout-container" ng-controller="productCtrl as vmProduct">
+		<div class="container-fluid">
+			<section>
+				<form class="form-inline">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<input type = "text" class="form-control" id="txtProductAdd" placeholder="Add Product" ng-model="vmProduct.newProduct" />
+							</div>
+							<button class="btn btn-primary" id="btnAddProduct" ng-click="vmProduct.addProduct()">
+								Add
+							</button>
+						</div>
+					</div>
+				</form>
+			</section>
+			<section>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>
+							Products
+						</h2>
+						<table ng-show="vmProduct.products" class="table product-table">
+							<tr class="product-row" ng-repeat="product in vmProduct.products">
+								<td>
+									{{product.productDescription}}
+								</td>
+								<td>
+									{{product.productPrice | currency}}
+								</td>
+								<td>
+									{{product.department}}
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+		<div>
+	</div>
+
+	<!-- Angular -->
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+
+	<!-- App -->
+	<script type="text/javascript" src="app.module.js"></script>
+
+	<!-- Product -->
+	<script type="text/javascript" src="core/core.module.js"></script>
+	<script type="text/javascript" src="core/dataservice.js"></script>
+
+	<!-- Product -->
+	<script type="text/javascript" src="product/product.module.js"></script>
+	<script type="text/javascript" src="product/product.controller.js"></script>
+</body>
+</html>
