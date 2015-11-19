@@ -36,6 +36,13 @@ gulp.task('ci', function() {
 });
 
 /**
+ * Gulp tasks to run on the CI server
+ */
+gulp.task('test-unit', function() {
+	gulp.run('test');
+});
+
+/**
  * Gulp watcher to run during local dev
  */
 gulp.task('dev', function() {
