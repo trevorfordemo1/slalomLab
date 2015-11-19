@@ -9,7 +9,7 @@
 ## Github
 
 * Create a new account (or use old) github.com
-** You'll need to do email confirmation for ne accounts
+  * You'll need to do email confirmation for ne accounts
 * Go to lab repo and fork: https://github.com/trevcor/slalomLab
 
 * See if git is installed
