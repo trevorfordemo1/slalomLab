@@ -13,10 +13,14 @@
 * Go to lab repo and fork: https://github.com/trevcor/slalomLab
 
 * Check if you already have git installed
+
 	git —version
+
    * mac 10.11.1 will prompt you to install git if it’s missing
 * cd into your workspace
+
 	git clone <forked repo>
+
 * cd into directory
 
 ## Run the app
