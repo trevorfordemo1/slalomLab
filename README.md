@@ -173,7 +173,14 @@ cf login -a https://api.run.pivotal.io
 cf push
 ```
 
-* Navigate to <your-org-name>.
+* Navigate to <your-org-name>.  You can find the link in your Cloud Foundry dashboard.
+
+
+## 4. Automating Builds
+
+* Login to our Jenkins server.  http://52.6.164.105:8080/
+
+* Credentials in the chat room.
 
 
 
