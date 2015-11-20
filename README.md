@@ -30,10 +30,17 @@ git clone <forked repo>
 ````
 
 * cd into directory
-* set active branch to develop
+* Create develop branch and set active branch to develop
 	
 ```
+git branch develop
 git checkout develop
+```
+
+* Push your new branch up to GitHub
+
+```
+git push origin develop
 ```
 
 * Setup SSH keys https://help.github.com/articles/generating-ssh-keys/
@@ -101,7 +108,7 @@ npm install
 
 We use gulp to run our javascript builds and tests.
 
-* install global gulp
+* install global gulp.  first test if installed.
 
 ```
 gulp —version
@@ -115,6 +122,7 @@ Bower helps us manage our client side runtime dependencies.
 * install bower globally
 
 ```
+bower --version
 npm install -g bower
 ```
 
@@ -126,7 +134,7 @@ bower install
 cd ../
 ```
 
-* Now we can start the node server to run the app
+* Now we can start the node server to run the app.  You'll need to open another terminal after starting node.
 
 ```
 node server.js
@@ -181,6 +189,18 @@ cf push
 * Login to our Jenkins server.  http://52.6.164.105:8080/
 
 * Credentials in the chat room.
+
+* Create a new job.  Start the job name with your last name and select freestyle project.
+
+* Scroll down to "Source Code Management" and add your repo to the job.
+
+* Add the develop branch
+
+* Test the build and make sure you can resolve the repo.
+
+
+
+* Configure test report outputs.
 
 
 
