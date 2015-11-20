@@ -6,7 +6,7 @@
 * chrome
 * sublime or other editor
 
-## Github
+## Github test
 
 * Create a new account (or use old) github.com
   * You'll need to do email confirmation for new accounts
