@@ -163,7 +163,13 @@ gulp dev
 
 * Create a space using the UI
 
-* Download and install the cli
+* Download and install the cli if you don't already have it installed.
+
+*  Test if the cli installed correctly
+
+```
+cf --version
+```
 
 * Login to your space
 
