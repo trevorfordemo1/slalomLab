@@ -24,13 +24,13 @@ rm -r node_modules
 #Cloud Foundry Deployment
 
 CF_API_ENDPOINT="api.run.pivotal.io"
-CF_USER="trevorc@slalom.com"
-CF_ORG="Trevor test org"
-CF_SPACE="development"
+CF_USER="tfcorcor@gmail.com"
+CF_ORG="slalom-lab-zero"
+CF_SPACE=$CF_SPACE:"development"
 
 #cf --version
 # cf login -a https://${CF_API_ENDPOINT} -u ${CF_USER} -p ${CF_PASSWORD} -o ${CF_ORG} -s ${CF_SPACE}
 # Use this version instead of the above if you need to disable SSL validation
-#cf login -a https://${CF_API_ENDPOINT} -u ${CF_USER} -p ${CF_PASSWORD} -o "${CF_ORG}" -s "${CF_SPACE}" --skip-ssl-validation
+cf login -a https://${CF_API_ENDPOINT} -u ${CF_USER} -p ${CF_PASSWORD} -o "${CF_ORG}" -s "${CF_SPACE}" --skip-ssl-validation
 
-#cf push $JOB_NAME
+cf push $JOB_NAME
