@@ -114,13 +114,21 @@ Bower helps us manage our client side runtime dependencies.
 npm install -g bower
 ```
 
-* start the node server to run the app
+* run a bower install
+
+```
+cd app
+bower install
+cd ../
+```
+
+* Now we can start the node server to run the app
 
 ```
 node server.js
 ```
 
-* run unit tests
+* We can also run unit tests
 
 ```
 gulp test-unit
@@ -137,6 +145,21 @@ gulp dev
 ## 3.  Hosting in the cloud
 
 * Create a Pivotal Web Services account: https://console.run.pivotal.io/register
+* You'll need to confirm your email address AND phone number.  You can't use the same number twice!  Create a google voice number if you need a new account.
+
+* Create an org name
+
+* Create a space using the UI
+
+* Download and install the cli
+
+* Login to your space
+
+```
+cf login -a https://api.run.pivotal.io
+```
+ 
+* Enter credentials
 
 
 
@@ -160,10 +183,13 @@ gulp dev
 
 
 
-## Sauce Labs
+## BONUS:  Sauce Labs
 
 * install protractor globally
-          - npm install -g protractor
-          - webdriver-manager update
+
+```
+npm install -g protractor
+webdriver-manager update
+```
 
 
