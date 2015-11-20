@@ -1,4 +1,4 @@
 ---
 applications:
-- name: slalomdevopsworkflow
+- name: trevor-slalomdevopsworkflow
 - command: node ./ideal/server.js
