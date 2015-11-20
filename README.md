@@ -36,6 +36,10 @@ git clone <forked repo>
 git checkout develop
 ```
 
+* Setup SSH keys https://help.github.com/articles/generating-ssh-keys/
+
+
+
 ## 2. Running the application
 
 ### Node
@@ -159,8 +163,17 @@ gulp dev
 cf login -a https://api.run.pivotal.io
 ```
  
-* Enter credentials
+* Enter credentials into cli
 
+* Update your manifest file.  Each app has a manifest which describes hwo the app should run.  Each app needs a unique name so open up the manifest.yml file and add your name to the app name property.
+
+* Push app to your space
+
+```
+cf push
+```
+
+* Navigate to <your-org-name>.
 
 
 
