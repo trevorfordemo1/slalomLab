@@ -55,19 +55,31 @@ cd /usr
 ls -l
 ```
 * if /usr/local is not owned by your user then you can’t install global node packages!
- * I did
+ * I changed ownership of the usr/local directory but I don't think that is the best approach.
 
 ```
 sudo chown -R $USER /usr/local
 ```
 
-* better to do
+* You will be better off just configuring npm to install global packages in a different location.
+* Create a new directory in your user space
 
 ```
 mkdir ~/npm
+```
+* Configure npm to use the new directory
+
+```
 npm config set prefix ~/npm
+```
+
+* Add the new location to your $PATH
+
+```
 export PATH=$PATH:$HOME/npm/bin (this only updates the path for the open shell)!!!!
-      
+```
+
+
 * install into default /usr/local
 * make sure that /usr/local/bin is in your $PATH
 
@@ -81,12 +93,20 @@ echo $PATH
 npm install
 ```
 
+### Gulp
+
+We use gulp to run our javascript builds and tests.
+
 * install global gulp
 
 ```
 gulp —version
 npm install -g gulp
 ```
+
+### Bower
+
+Bower helps us manage our client side runtime dependencies.
 
 * install bower globally
 
@@ -103,13 +123,13 @@ node server.js
 * run unit tests
 
 ```
-grunt test-unit
+gulp test-unit
 ```
 
-* run grunt dev watcher
+* run gulp dev watcher
 
 ```
-grunt dev
+gulp dev
 ```
 
 * save a code change and see tests run
